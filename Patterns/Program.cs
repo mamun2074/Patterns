@@ -1,13 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using Patterns.SlidingWindows.DynamicSize;
 using Patterns.SlidingWindows.FixSize;
 
 Console.WriteLine("Hello, World!");
 
-FixSize twoPointer = new FixSize();
+// FixSize twoPointer = new FixSize();
+//
+// int[] arr = { 5, 8, 3, 2, 1, 4, 8, 7 };
+// int sum = twoPointer.FindMaxSum(arr, 3);
+//
 
-int[] arr = { 5, 8, 3, 2, 1, 4, 8, 7 };
-int sum = twoPointer.FindMaxSum(arr, 3);
+LongestSubstringWithoutRepeatingCharacters maxBrute = new LongestSubstringWithoutRepeatingCharacters();
 
-Console.WriteLine(sum);
+string s = "cadbzabcd";
+int x=maxBrute.LongestSubstringWithoutRepeatingCharactersBruit(s);
+
+Console.WriteLine(x);
