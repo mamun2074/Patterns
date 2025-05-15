@@ -12,9 +12,12 @@ Console.WriteLine("Hello, World!");
 // int sum = twoPointer.FindMaxSum(arr, 3);
 //
 
-LongestSubstringWithoutRepeatingCharacters maxBrute = new LongestSubstringWithoutRepeatingCharacters();
+// LongestSubstringWithoutRepeatingCharacters maxBrute = new LongestSubstringWithoutRepeatingCharacters();
+//
+// string s = "cadbzabcd";
+// int x=maxBrute.LongestSubstringWithoutRepeatingCharactersSlidingPointer(s);
 
-string s = "cadbzabcd";
-int x=maxBrute.LongestSubstringWithoutRepeatingCharactersBruit(s);
-
+ContainDuplicate containDuplicate = new ContainDuplicate();
+int[] arr = { 1,2,3,4,5,6,7,8,9,9 };
+bool x = containDuplicate.ContainsNearbyDuplicate(arr, 3);
 Console.WriteLine(x);
