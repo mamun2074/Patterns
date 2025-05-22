@@ -17,7 +17,15 @@ Console.WriteLine("Hello, World!");
 // string s = "cadbzabcd";
 // int x=maxBrute.LongestSubstringWithoutRepeatingCharactersSlidingPointer(s);
 
-ContainDuplicate containDuplicate = new ContainDuplicate();
-int[] arr = { 1,2,3,4,5,6,7,8,9,9 };
-bool x = containDuplicate.ContainsNearbyDuplicate(arr, 3);
+// ContainDuplicate containDuplicate = new ContainDuplicate();
+// int[] arr = { 2, 3, 1, 2, 4, 3 };
+// bool x = containDuplicate.ContainsNearbyDuplicate(arr, 3);
+
+
+int[] arr = { 1,5,9,1,5,9 };
+// MinSizeSubArray minSizeSubArray = new MinSizeSubArray();
+// int x = minSizeSubArray.MinSubArrayLen(7, arr);
+
+ContainDuplicateHard hard = new ContainDuplicateHard();
+bool x = hard.ContainsNearbyAlmostDuplicate(arr, 2, 3);
 Console.WriteLine(x);
