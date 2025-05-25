@@ -22,10 +22,11 @@ Console.WriteLine("Hello, World!");
 // bool x = containDuplicate.ContainsNearbyDuplicate(arr, 3);
 
 
-int[] arr = { 1,5,9,1,5,9 };
+int[] arr = { 1 };
 // MinSizeSubArray minSizeSubArray = new MinSizeSubArray();
 // int x = minSizeSubArray.MinSubArrayLen(7, arr);
 
-ContainDuplicateHard hard = new ContainDuplicateHard();
-bool x = hard.ContainsNearbyAlmostDuplicate(arr, 2, 3);
+SlidingWindowMax hard = new SlidingWindowMax();
+int[] x = hard.MaxSlidingWindow(arr, 1);
+
 Console.WriteLine(x);
