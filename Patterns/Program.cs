@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+using Patterns.Algorithms.Heap;
 using Patterns.SlidingWindows.DynamicSize;
 using Patterns.SlidingWindows.FixSize;
 
@@ -22,11 +23,25 @@ Console.WriteLine("Hello, World!");
 // bool x = containDuplicate.ContainsNearbyDuplicate(arr, 3);
 
 
-int[] arr = { 1 };
+// int[] arr = { 1 };
 // MinSizeSubArray minSizeSubArray = new MinSizeSubArray();
 // int x = minSizeSubArray.MinSubArrayLen(7, arr);
 
-SlidingWindowMax hard = new SlidingWindowMax();
-int[] x = hard.MaxSlidingWindow(arr, 1);
+// SlidingWindowMax hard = new SlidingWindowMax();
+// int[] x = hard.MaxSlidingWindow(arr, 1);
 
-Console.WriteLine(x);
+MaxHeap<int> maxHeap = new MaxHeap<int>();
+maxHeap.Insert(10);
+int x = maxHeap.Peek();
+maxHeap.Insert(18);
+maxHeap.Insert(15);
+maxHeap.Insert(12);
+maxHeap.Insert(40);
+maxHeap.Insert(25);
+maxHeap.Insert(20);
+
+int y = maxHeap.Peek();
+
+maxHeap.Delete();
+
+maxHeap.Delete();
