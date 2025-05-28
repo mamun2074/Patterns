@@ -4,7 +4,7 @@ public class MinHeap<T> : HeapBase<T> where T : IComparable<T>
 {
     protected override void HeapifyUp(int index)
     {
-        while (HasParent(index) && _items[index].CompareTo(GetParent(index)) < 0)
+        while (HasParent(index) && _items[index].value.CompareTo(GetParent(index).value) < 0)
         {
             int parentIndex = GetParentIndex(index);
             Swap(index, parentIndex);
@@ -17,12 +17,12 @@ public class MinHeap<T> : HeapBase<T> where T : IComparable<T>
         while (HasLeftChild(index))
         {
             int smallChildIndex = GetLeftChildIndex(index);
-            if (HasRightChild(index) && GetLeftChild(index).CompareTo(GetRightChild(index)) < 0)
+            if (HasRightChild(index) && GetLeftChild(index).value.CompareTo(GetRightChild(index).value) < 0)
             {
                 smallChildIndex = GetRightChildIndex(index);
             }
 
-            if (_items[index].CompareTo(_items[smallChildIndex]) <= 0)
+            if (_items[index].value.CompareTo(_items[smallChildIndex].value) <= 0)
             {
                 break;
             }

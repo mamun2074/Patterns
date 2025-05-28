@@ -1,8 +1,14 @@
 namespace Patterns.Algorithms.Heap;
 
+public class KeyValuePair<T>
+{
+    public T index { get; set; }
+    public T value { get; set; }
+}
+
 public abstract class HeapBase<T> where T : IComparable<T>
 {
-    protected List<T> _items = new List<T>();
+    protected List<KeyValuePair<T>> _items = new List<KeyValuePair<T>>();
     public int _count => _items.Count;
 
     protected abstract void HeapifyUp(int index);
@@ -16,17 +22,17 @@ public abstract class HeapBase<T> where T : IComparable<T>
     protected bool HasLeftChild(int i) => GetLeftChildIndex(i) < _count;
     protected bool HasRightChild(int i) => GetRightChildIndex(i) < _count;
 
-    protected T GetParent(int i) => _items[GetParentIndex(i)];
-    protected T GetLeftChild(int i) => _items[GetLeftChildIndex(i)];
-    protected T GetRightChild(int i) => _items[GetRightChildIndex(i)];
+    protected KeyValuePair<T> GetParent(int i) => _items[GetParentIndex(i)];
+    protected KeyValuePair<T> GetLeftChild(int i) => _items[GetLeftChildIndex(i)];
+    protected KeyValuePair<T> GetRightChild(int i) => _items[GetRightChildIndex(i)];
 
-    public T Peek()
+    public KeyValuePair<T> Peek()
     {
         if (_items.Count == 0) throw new InvalidOperationException("Heap is empty");
         return _items[0];
     }
 
-    public void Insert(T item)
+    public void Insert(KeyValuePair<T> item)
     {
         _items.Add(item);
         HeapifyUp(_count - 1);

@@ -31,15 +31,30 @@ Console.WriteLine("Hello, World!");
 // int[] x = hard.MaxSlidingWindow(arr, 1);
 
 MaxHeap<int> maxHeap = new MaxHeap<int>();
-maxHeap.Insert(10);
-maxHeap.Insert(18);
-maxHeap.Insert(15);
-maxHeap.Insert(12);
-maxHeap.Insert(40);
-maxHeap.Insert(25);
-maxHeap.Insert(20);
+KeyValuePair<int> first = new KeyValuePair<int>();
+first.index = 0;
+first.value = 20;
+maxHeap.Insert(first);
+first.index = 1;
+first.value = 30;
+maxHeap.Insert(first);
+first.index = 2;
+first.value = 15;
+maxHeap.Insert(first);
+first.index = 3;
+first.value = 12;
+maxHeap.Insert(first);
+first.index = 4;
+first.value = 40;
+maxHeap.Insert(first);
+first.index = 5;
+first.value = 25;
+maxHeap.Insert(first);
+first.index = 6;
+first.value = 20;
+maxHeap.Insert(first);
 
-int y = maxHeap.Peek();
+KeyValuePair<int>  y = maxHeap.Peek();
 
 maxHeap.Delete();
 
@@ -47,16 +62,16 @@ maxHeap.Delete();
 
 
 MinHeap<int> minHeap = new MinHeap<int>();
-minHeap.Insert(10);
-minHeap.Insert(5);
-minHeap.Insert(10);
-minHeap.Insert(12);
-minHeap.Insert(40);
-minHeap.Insert(25);
-minHeap.Insert(20);
-
-int p = minHeap.Peek();
-
-minHeap.Delete();
-
-minHeap.Delete();
+// minHeap.Insert(10);
+// minHeap.Insert(5);
+// minHeap.Insert(10);
+// minHeap.Insert(12);
+// minHeap.Insert(40);
+// minHeap.Insert(25);
+// minHeap.Insert(20);
+//
+// int p = minHeap.Peek();
+//
+// minHeap.Delete();
+//
+// minHeap.Delete();

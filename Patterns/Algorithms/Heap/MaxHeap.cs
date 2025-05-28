@@ -4,7 +4,8 @@ public class MaxHeap<T> : HeapBase<T> where T : IComparable<T>
 {
     protected override void HeapifyUp(int index)
     {
-        while (HasParent(index) && _items[index].CompareTo(GetParent(index)) > 0)
+        T parentValue = GetParent(index).value;
+        while (HasParent(index) && _items[index].value.CompareTo(parentValue) > 0)
         {
             int parentIndex = GetParentIndex(index);
             Swap(index, parentIndex);
@@ -19,13 +20,13 @@ public class MaxHeap<T> : HeapBase<T> where T : IComparable<T>
         {
             int smallerChildIndex = GetLeftChildIndex(index);
 
-            if (HasRightChild(index) && GetLeftChild(index).CompareTo(GetRightChild(index)) < 0)
+            if (HasRightChild(index) && GetLeftChild(index).value.CompareTo(GetRightChild(index).value) < 0)
             {
                 smallerChildIndex = GetRightChildIndex(index);
             }
 
 
-            if (_items[smallerChildIndex].CompareTo(_items[index]) <= 0)
+            if (_items[smallerChildIndex].value.CompareTo(_items[index].value) <= 0)
                 break;
 
             Swap(index, smallerChildIndex);
