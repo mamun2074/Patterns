@@ -4,7 +4,7 @@ public class MaxHeap<T> : HeapBase<T> where T : IComparable<T>
 {
     protected override void HeapifyUp(int index)
     {
-        while (HasParent(index) && GetParent(index).CompareTo(_items[index]) < 0)
+        while (HasParent(index) && _items[index].CompareTo(GetParent(index)) > 0)
         {
             int parentIndex = GetParentIndex(index);
             Swap(index, parentIndex);

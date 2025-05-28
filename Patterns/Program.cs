@@ -30,21 +30,20 @@ Console.WriteLine("Hello, World!");
 // SlidingWindowMax hard = new SlidingWindowMax();
 // int[] x = hard.MaxSlidingWindow(arr, 1);
 
-// MaxHeap<int> maxHeap = new MaxHeap<int>();
-// maxHeap.Insert(10);
-// int x = maxHeap.Peek();
-// maxHeap.Insert(18);
-// maxHeap.Insert(15);
-// maxHeap.Insert(12);
-// maxHeap.Insert(40);
-// maxHeap.Insert(25);
-// maxHeap.Insert(20);
-//
-// int y = maxHeap.Peek();
-//
-// maxHeap.Delete();
-//
-// maxHeap.Delete();
+MaxHeap<int> maxHeap = new MaxHeap<int>();
+maxHeap.Insert(10);
+maxHeap.Insert(18);
+maxHeap.Insert(15);
+maxHeap.Insert(12);
+maxHeap.Insert(40);
+maxHeap.Insert(25);
+maxHeap.Insert(20);
+
+int y = maxHeap.Peek();
+
+maxHeap.Delete();
+
+maxHeap.Delete();
 
 
 MinHeap<int> minHeap = new MinHeap<int>();
@@ -56,7 +55,7 @@ minHeap.Insert(40);
 minHeap.Insert(25);
 minHeap.Insert(20);
 
-int y = minHeap.Peek();
+int p = minHeap.Peek();
 
 minHeap.Delete();
 
