@@ -55,6 +55,8 @@ Console.WriteLine("Hello, World!");
 // maxHeap.Delete();
 
 
-Solution solution = new Solution();
-int[] arr = { 1, 3, -1, -3, 5, 3, 6, 7 };
-solution.MaxSlidingWindow(arr, 3);
+// Solution solution = new Solution();
+// int[] arr = { 1, 3, -1, -3, 5, 3, 6, 7 };
+// int[] kk=solution.MaxSlidingWindow(arr, 3);
+
+Console.WriteLine("Hello, World!");

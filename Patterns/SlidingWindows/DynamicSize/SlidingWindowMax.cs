@@ -1,7 +1,7 @@
 namespace Patterns.SlidingWindows.DynamicSize;
 
-public class Solution {
-
+public class Solution
+{
     public class KeyValuePair<T>
     {
         public T index { get; set; }
@@ -89,35 +89,36 @@ public class Solution {
     }
 
 
-    public int[] MaxSlidingWindow(int[] nums, int k) {
-        int len=nums.Length;
-        int[] output= new int[len-k+1];
+    public int[] MaxSlidingWindow(int[] nums, int k)
+    {
+        int len = nums.Length;
+        int[] result = new int[len - k + 1];
         MaxHeap<int> maxHeap = new MaxHeap<int>();
-        for(int i=0; i<k; i++)
+        for (int i = 0; i < k; i++)
         {
-            KeyValuePair<int> item = new KeyValuePair<int>();
-            item.index = i;
-            item.value = nums[i];
-            maxHeap.Insert(item);
+            KeyValuePair<int> firstKItems = new KeyValuePair<int>();
+            firstKItems.index = i;
+            firstKItems.value = nums[i];
+            maxHeap.Insert(firstKItems);
         }
-        KeyValuePair<int> pair = maxHeap.Peek();
-        output[0]=pair.value;
 
-        for(int j=1; j<=len-k; j++)
+        result[0] = maxHeap.Peek().value;
+
+        for (int j = 1; j <len - k + 1; j++)
         {
-            KeyValuePair<int> first = new KeyValuePair<int>();
-            first.index = j+k-1;
-            first.value = nums[j+k-1];
-            maxHeap.Insert(first);
-            KeyValuePair<int> newPair = maxHeap.Peek();
-            if(newPair.index < j)
+            KeyValuePair<int> nextKItems = new KeyValuePair<int>();
+            nextKItems.index = j+k-1;
+            nextKItems.value = nums[j+k-1];
+            maxHeap.Insert(nextKItems);
+
+            while (maxHeap.Peek().index < j)
             {
                 maxHeap.Delete();
-                newPair = maxHeap.Peek();
             }
-            output[j]=newPair.value;
+
+            result[j] = maxHeap.Peek().value;
         }
 
-        return output;
+        return result;
     }
 }
