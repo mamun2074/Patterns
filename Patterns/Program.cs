@@ -30,48 +30,31 @@ Console.WriteLine("Hello, World!");
 // SlidingWindowMax hard = new SlidingWindowMax();
 // int[] x = hard.MaxSlidingWindow(arr, 1);
 
-MaxHeap<int> maxHeap = new MaxHeap<int>();
-KeyValuePair<int> first = new KeyValuePair<int>();
-first.index = 0;
-first.value = 20;
-maxHeap.Insert(first);
-first.index = 1;
-first.value = 30;
-maxHeap.Insert(first);
-first.index = 2;
-first.value = 15;
-maxHeap.Insert(first);
-first.index = 3;
-first.value = 12;
-maxHeap.Insert(first);
-first.index = 4;
-first.value = 40;
-maxHeap.Insert(first);
-first.index = 5;
-first.value = 25;
-maxHeap.Insert(first);
-first.index = 6;
-first.value = 20;
-maxHeap.Insert(first);
-
-KeyValuePair<int>  y = maxHeap.Peek();
-
-maxHeap.Delete();
-
-maxHeap.Delete();
-
-
-MinHeap<int> minHeap = new MinHeap<int>();
-// minHeap.Insert(10);
-// minHeap.Insert(5);
-// minHeap.Insert(10);
-// minHeap.Insert(12);
-// minHeap.Insert(40);
-// minHeap.Insert(25);
-// minHeap.Insert(20);
+// MaxHeap<int> maxHeap = new MaxHeap<int>();
+// KeyValuePair<int> first = new KeyValuePair<int>();
+// first.index = 0;
+// first.value = 20;
+// maxHeap.Insert(first);
+// KeyValuePair<int> second = new KeyValuePair<int>();
+// second.index = 1;
+// second.value = 30;
+// maxHeap.Insert(second);
+// KeyValuePair<int> third = new KeyValuePair<int>();
+// third.index = 2;
+// third.value = 15;
+// maxHeap.Insert(third);
+// KeyValuePair<int> forth = new KeyValuePair<int>();
+// forth.index = 3;
+// forth.value = 50;
+// maxHeap.Insert(forth);
 //
-// int p = minHeap.Peek();
+// KeyValuePair<int> y = maxHeap.Peek();
 //
-// minHeap.Delete();
+// maxHeap.Delete();
 //
-// minHeap.Delete();
+// maxHeap.Delete();
+
+
+Solution solution = new Solution();
+int[] arr = { 1, 3, -1, -3, 5, 3, 6, 7 };
+solution.MaxSlidingWindow(arr, 3);
